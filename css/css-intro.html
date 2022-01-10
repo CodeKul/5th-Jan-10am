@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* type selector
+class selector 
+id selector
+
+combinator selector - we can target the element using relation between the elements
+
+child combinator  selector
+descendent combinator selector
+
+
+child selector syntax 
+
+parent element > child element { css statements}
+
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+      h1 {
+        color: green;
+      }
+
+      .one {
+        background-color: aqua;
+      }
+
+      .news {
+        color: yellow;
+      }
+
+      .sports {
+        color: red;
+      }
+
+      #four {
+        font-size: 40px;
+      }
+
+      div section > p {
+        color: blue;
+        background-color: chartreuse;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: red">CSS Intro</h1>
+
+    <p class="one news">One</p>
+    <p class="two">Two</p>
+    <p class="three">Three</p>
+    <p id="four">Four</p>
+    <p id="four">Five</p>
+
+    <div class="one sports">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, culpa!
+        Quod earum iste deleniti velit magnam ratione voluptate eius ab at enim
+        vero, quo dolore molestiae suscipit adipisci accusantium dolorum.
+      </p>
+    </div>
+
+    <div class="container">
+      <section>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo,
+          maxime repellendus distinctio neque nisi exercitationem suscipit
+          numquam, eius omnis voluptatibus velit! Distinctio adipisci commodi
+          consequuntur repellat laboriosam sit, doloremque repudiandae!i
+        </p>
+      </section>
+    </div>
+
+    <span class="sports">Sports</span>
+  </body>
+</html>
