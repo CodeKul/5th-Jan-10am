@@ -21,7 +21,23 @@ child selector syntax
 
 parent element > child element { css statements}
 
+sibling selector 
+adjacent sibling selector and general sibling selector 
+
+general sibling selector syntax 
+
+1st element ~ target element
+
+
+adjacent sibling selector syntax
+
+1st element + target element
+
 */
+
+p + a{
+  background-color: red;
+}
 
 *{
     padding: 0;
@@ -52,13 +68,27 @@ parent element > child element { css statements}
         color: blue;
         background-color: chartreuse;
       }
+
+
+      /* grouping selector */
+      table, th{
+        border: 2px solid red;
+        border-collapse: collapse;
+      }
+     
     </style>
   </head>
   <body>
     <h1 style="color: red">CSS Intro</h1>
 
+
+    <div class="headlines">
+    <a href="#">Visit to BBC</a>
+
     <p class="one news">One</p>
     <p class="two">Two</p>
+    <a href="#">Visit to codekul</a>
+    <a href="#">Visit to BBC</a>
     <p class="three">Three</p>
     <p id="four">Four</p>
     <p id="four">Five</p>
@@ -69,7 +99,18 @@ parent element > child element { css statements}
         Quod earum iste deleniti velit magnam ratione voluptate eius ab at enim
         vero, quo dolore molestiae suscipit adipisci accusantium dolorum.
       </p>
+      <a href="#">Visit to codekul</a>
+      <a href="#">Visit to BBC</a>
+      <a href="#">Visit to Google</a>
+      <a href="#">Visit to Oracle</a>
     </div>
+
+
+  </div>
+
+    <a href="#">Visit to Twitter</a>
+
+
 
     <div class="container">
       <section>
@@ -83,5 +124,24 @@ parent element > child element { css statements}
     </div>
 
     <span class="sports">Sports</span>
+
+    <br><br><br><br><br>
+
+    <table>
+      <tr>
+        <th rowspan="3">Day</th>
+        <th colspan="3">Seminar</th>
+      </tr>
+
+      <tr>
+        <th colspan="2">Schedule</th>
+        <th rowspan="2">Topic</th>
+      </tr>
+
+      <tr>
+        <th>Begin</th>
+        <th>End</th>
+      </tr>
+    </table>
   </body>
 </html>
