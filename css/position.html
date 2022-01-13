@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container {
+        height: 400px;
+        width: 400px;
+        position: relative;
+
+        display: inline-block;
+        border: solid red 2px;
+
+        /* position: relative;
+            left: 200px;
+            top: 500px; */
+      }
+
+      .inner-block {
+        height: 100px;
+        width: 100px;
+        background-color: yellow;
+      }
+
+      .one,
+      .six {
+        background-color: blue;
+      }
+
+      .two,
+      .four {
+        background-color: red;
+        /* position: absolute;
+        right: 10px;
+        bottom: 10px; */
+      }
+
+      .three,
+      .five {
+        background-color: green;
+      }
+
+      .six {
+        position: relative;
+        top: 150px;
+        left: 200px;
+      }
+
+      .two {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+      }
+
+      img{
+          height: 100%;
+          width: 100%;
+      }
+
+      p{
+          position: absolute;
+          bottom: 70px;
+          font-size: 20px;
+          color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <header>
+        <h1>CSS Position</h1>
+    </header>
+
+    <nav>
+        <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li></ul>
+    </nav> -->
+    <!-- <div>
+    <div class="container one"></div>
+    <div class="container two"></div>
+    <div class="container three"></div>
+</div>
+
+<div></div>
+    <div class="container four"></div>
+    <div class="container five"></div>
+    <div class="container six"></div>
+
+</div> -->
+
+    <div class="container">
+      <div class="inner-block one"></div>
+
+      <div class="inner-block two"></div>
+
+      <div class="inner-block three"></div>
+    </div>
+
+    <div class="container">
+      <img src="../resources/2.jpg" alt="" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+       molestias quia enim ratione modi minima quo dolore.
+      </p>
+    </div>
+  </body>
+</html>
