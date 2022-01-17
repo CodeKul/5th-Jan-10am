@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ -->
+    <style>
+      /* 
+
+justify-content vs justify-items 
+align-content vs align-items
+
+
+      flex direction - row -> justify keyword properties are used place elements in horizontal direction
+             align keyword properties are used place elements in vertical direction
+
+
+    flex direction - column -> justify keyword properties are used place elements in vertical direction
+    align keyword properties are used place elements in vertical direction    
+    
+    
+    justify keyword properties are used to place or align the element
+         in horizontal direction when (flex direction is row) 
+         
+
+         justify keyword properties are used to place or align the element
+         in vertical direction when (flex direction is column)
+         
+         
+
+ align keyword properties are used to place or align the element
+         in vertical direction when (flex direction is row) 
+         
+
+         align keyword properties are used to place or align the element
+         in horizontal direction when (flex direction is column)
+         
+         
+         */
+      .container {
+        border: solid 2px black;
+        height: 650px;
+        display: flex;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        /* justify-content:center; */
+        align-items:flex-end;
+      }
+
+      .two{
+          align-self: flex-start;
+      }
+
+      .flex-items {
+        border: solid 2px red;
+        height: 100px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="flex-items one">One</div>
+      <div class="flex-items two">Two</div>
+      <div class="flex-items three">Three</div>
+      <div class="flex-items four">Four</div>
+      <div class="flex-items five">Five</div>
+    </div>
+  </body>
+</html>
