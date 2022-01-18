@@ -47,11 +47,22 @@ align-content vs align-items
         flex-direction: row;
         /* flex-wrap: wrap; */
         /* justify-content:center; */
-        align-items:flex-end;
+        align-items: flex-end;
+        row-gap: 10px;
+        
       }
 
-      .two{
-          align-self: flex-start;
+      .two {
+        /* align-self: flex-start; */
+        flex-shrink: 3;
+      }
+
+      .three{
+        flex-shrink: 5;
+      }
+
+      .four{
+        flex-shrink: 1;
       }
 
       .flex-items {
