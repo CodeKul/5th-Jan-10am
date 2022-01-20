@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 500px 250px 250px;
+        grid-template-rows: 250px 250px;
+        /* row-gap: 10px;
+        column-gap: 10px; */
+
+        gap: 10px;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+
+      .grid-items:first-child {
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="grid-items">
+        <img src="../resources/4.jpg" alt="" />
+      </div>
+      <div class="grid-items">
+        <img src="../resources/4.jpg" alt="" />
+      </div>
+      <div class="grid-items">
+        <img src="../resources/4.jpg" alt="" />
+      </div>
+      <div class="grid-items">
+        <img src="../resources/4.jpg" alt="" />
+      </div>
+      <div class="grid-items">
+        <img src="../resources/4.jpg" alt="" />
+      </div>
+    </div>
+  </body>
+</html>

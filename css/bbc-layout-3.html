@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container,
+      .column-1 .row-2,  .column-2 h4 ~ div {
+        display: flex;
+      }
+
+      .row-2 {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+
+      .column-1 {
+        width: 60%;
+      }
+
+      .column-2 {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .column-2 .row-1{
+          display: flex;
+          flex-direction: column;
+          justify-content: stretch;
+      }
+
+      .card {
+        width: 32%;
+        height: 35%;
+      }
+
+      .row-1{
+          height: 550px;
+      }
+
+      .row-1 h4, span:nth-child(1){
+          background-color: red;
+          color: white;
+      }
+
+      .column-2 .row-2 .card{
+          height: 100%;
+          width: 100%;
+      }
+
+      span:nth-child(1){
+          height: 30px;
+          width: 30px;
+          border-radius: 100%;
+          display:inline-block;
+          text-align: center;
+          /* vertical-align: middle; */
+          padding-top: 2px;
+      }
+
+      .column-2 h4 ~ div{
+          padding: 15px;
+          background-color:black;
+          color: white;
+          gap: 10px;
+      }
+
+      *{
+          margin: 0;
+          padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="column-1">
+        <div class="row-1">
+          <img src="../resources/4.jpg" alt="" />
+        </div>
+        <div class="row-2">
+          <div class="card">
+            <img src="../resources/5.jpg" alt="" />
+            <h4>Card-Title</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error
+              animi placeat, nobis quo voluptates eveniet facilis facere dolores
+              quisquam iste veritatis nisi soluta et, culpa magni. Delectus quos
+              repellendus sunt?
+            </p>
+          </div>
+          <div class="card">
+            <img src="../resources/5.jpg" alt="" />
+            <h4>Card-Title</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error
+              animi placeat, nobis quo voluptates eveniet facilis facere dolores
+              quisquam iste veritatis nisi soluta et, culpa magni. Delectus quos
+              repellendus sunt?
+            </p>
+          </div>
+          <div class="card">
+            <img src="../resources/5.jpg" alt="" />
+            <h4>Card-Title</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error
+              animi placeat, nobis quo voluptates eveniet facilis facere dolores
+              quisquam iste veritatis nisi soluta et, culpa magni. Delectus quos
+              repellendus sunt?
+            </p>
+          </div>
+          <div class="card">
+            <img src="../resources/5.jpg" alt="" />
+            <h4>Card-Title</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error
+              animi placeat, nobis quo voluptates eveniet facilis facere dolores
+              quisquam iste veritatis nisi soluta et, culpa magni. Delectus quos
+              repellendus sunt?
+            </p>
+          </div>
+          <div class="card">
+            <img src="../resources/5.jpg" alt="" />
+            <h4>Card-Title</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error
+              animi placeat, nobis quo voluptates eveniet facilis facere dolores
+              quisquam iste veritatis nisi soluta et, culpa magni. Delectus quos
+              repellendus sunt?
+            </p>
+          </div>
+          <div class="card">
+            <img src="../resources/5.jpg" alt="" />
+            <h4>Card-Title</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error
+              animi placeat, nobis quo voluptates eveniet facilis facere dolores
+              quisquam iste veritatis nisi soluta et, culpa magni. Delectus quos
+              repellendus sunt?
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column-2">
+        <div class="row-1">
+          <h4>Latest Business News</h4>
+          <div>
+            <span>1</span>
+            <span
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
+            </span>
+          </div>
+          <div>
+            <span>1</span>
+            <span
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
+            </span>
+          </div>
+          <div>
+            <span>1</span>
+            <span
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
+            </span>
+          </div>
+          <div>
+            <span>1</span>
+            <span
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
+            </span>
+          </div>
+          <div>
+            <span>1</span>
+            <span
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
+            </span>
+          </div>
+        </div>
+
+        <div class="row-2">
+          <div class="card">
+            <img src="../resources/5.jpg" alt="" />
+            <h4>Card-Title</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error
+              animi placeat, nobis quo voluptates eveniet facilis facere dolores
+              quisquam iste veritatis nisi soluta et, culpa magni. Delectus quos
+              repellendus sunt?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

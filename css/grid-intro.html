@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- https://css-tricks.com/snippets/css/complete-guide-grid/ -->
+
+    <style>
+        .container{
+            /* width: 1000px; */
+            height: 650px;
+            border: solid 2px red;
+            display: grid;
+            grid-template-columns: 25% 200px 1fr 2fr;
+            grid-template-rows: 100px 100px 100px;
+
+            /* justify-items: center; */
+/* justify-content: center;
+            align-content: center; */
+
+            /* place-items: center; */
+        }
+
+        .grid-items{
+            border: solid 2px blue;
+        }
+
+        .one{
+            grid-column-start: 2;
+            grid-column-end: 4;
+
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+
+        <div class="grid-items one">One</div>
+        <div class="grid-items two">Two</div>
+        <div class="grid-items three">Three</div>
+        <div class="grid-items four">Four</div>
+        <div class="grid-items five">Five</div>
+        <div class="grid-items six">Six</div>
+
+        <div class="grid-items">One</div>
+        <div class="grid-items">Two</div>
+        <div class="grid-items">Three</div>
+        <div class="grid-items">Four</div>
+        <div class="grid-items">Five</div>
+        <div class="grid-items">Six</div>
+
+
+    </div>
+</body>
+</html>
