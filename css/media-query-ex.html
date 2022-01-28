@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      img {
+        height: 100%;
+        width: 100%;
+      }
+
+      .column-1,
+      .column-2 {
+        width: 50%;
+      }
+      .container,
+      .column-2 {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .inner-column-1,
+      .inner-column-2 {
+        width: 50%;
+      }
+
+.column-1, .block{
+    position: relative;
+}
+
+.block{
+    border: solid 2px red;
+    
+}
+
+      p{
+        
+          color: white;
+          position: absolute;
+          bottom: 10px;
+      }
+
+      @media screen and (max-width: 1000px){
+          .column-1, .column-2{
+              width: 100%;
+          }
+      }
+
+      @media screen and (max-width:600px) {
+          .block img{
+              display: none;
+          }
+
+          .column-2{
+              flex-direction: column;
+          }
+
+          .inner-column-2, .inner-column-1{
+              width: 100%;
+          }
+
+          p{
+              position: static;
+              color: black;
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="column-1">
+        <img src="../resources/3.jpg" alt="" />
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos
+         
+        </p>
+      </div>
+
+      <div class="column-2">
+        <div class="inner-column-1">
+          <div class="block">
+            <img src="../resources/3.jpg" alt="" />
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+             
+            </p>
+          </div>
+          <div class="block">
+            <img src="../resources/3.jpg" alt="" />
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+             
+            </p>
+          </div>
+        </div>
+
+        <div class="inner-column-2">
+          <div class="block">
+            <img src="../resources/3.jpg" alt="" />
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+             
+            </p>
+          </div>
+          <div class="block">
+            <img src="../resources/3.jpg" alt="" />
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
