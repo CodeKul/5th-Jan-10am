@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function marksObtained() {
+        let computernetworks = 70;
+        let operatingsystem = 60;
+        let digitalelectronics = 50;
+        let wavetheory = 90;
+
+        let total =
+          computernetworks + operatingsystem + digitalelectronics + wavetheory;
+        console.log("Total marks obtained :", total);
+
+        let percentage = 58;
+
+        console.log("Total Percentage obtained :", percentage, "%");
+
+        // if (percentage >= 75) {
+        //   console.log("First Class with distinction");
+        // } else if (percentage >= 60 && percentage <= 74) {
+        //   console.log("First Class");
+        // } else if (percentage >= 50 && percentage < 60) {
+        //   console.log("Second Class");
+        // } else {
+        //   console.log("Fail");
+        // }
+
+        // https://www.programiz.com/javascript/examples
+
+        // arrays and iteration
+
+        switch (percentage) {
+          case percentage >= 75:
+            console.log("First Class with distinction");
+            break;
+          case (58):
+            console.log("First Class");
+            break;
+
+          case (50):
+            console.log("Second Class");
+            break;
+          default:
+            console.log("Fail");
+            break;
+        }
+      }
+
+      marksObtained();
+    </script>
+  </body>
+</html>

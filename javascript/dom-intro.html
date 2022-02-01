@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="createPara()">Create Paragraph</button>
+
+    <input id="data" type="text" />
+
+    <button onclick="accessData()">Display Data</button>
+
+    <script>
+
+//https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+// events ans event listeners
+      function accessData() {
+        let data = document.getElementById("data").value;
+        console.log("Inserted data: ", data);
+        document.write("Inserted data :", data);
+      }
+      function createPara() {
+        let body = document.body;
+
+        let paragraph = document.createElement("p");
+
+        let content = "Welcome to Javascript Magic";
+
+        body.append(paragraph);
+        paragraph.append(content);
+      }
+    </script>
+  </body>
+</html>
