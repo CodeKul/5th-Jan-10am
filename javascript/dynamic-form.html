@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        .label{
+            font-size: x-large;
+            font-style: italic;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- <form action="">
+        <label for="">Full Name</label>
+        <input type="text">
+        <label for="">Email</label>
+        <input type="email">
+        <button>Submit</button>
+    </form> -->
+
+    <button onclick="createForm()">Create Form</button>
+
+    <script>
+      const createForm = () => {
+        let body = document.body;
+
+        let form = document.createElement("form");
+
+        body.appendChild(form);
+
+        let label = document.createElement("label")
+
+        form.append(label)
+
+        // let input1Content = "FullName"
+        label.append("Full Name")
+
+        let fullnameInput = document.createElement("input");
+
+        form.append(fullnameInput);
+
+        fullnameInput.setAttribute("type", "text")
+
+        let emailInput = document.createElement("input");
+
+        form.append(emailInput)
+
+        emailInput.setAttribute("type", "email")
+
+        label.setAttribute("class", "label")
+
+        label.setAttribute("style", "color:red")
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="para" id="para">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem voluptatem
+      totam alias, id expedita eligendi iusto recusandae suscipit. Iste dolore
+      totam corrupti voluptatibus modi sapiente vero perspiciatis nam commodi
+      quidem.
+    </p>
+
+    <section class="para">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae enim
+      repudiandae numquam deserunt voluptas, voluptate eius, praesentium
+      consequatur ratione incidunt, aliquid nam fugiat rerum nulla inventore!
+      Pariatur eum quidem quisquam!
+    </section>
+
+    <p>Codekul</p>
+
+    <div id="codekul">Codekul</div>
+
+    <input id="input" type="text" />
+
+    <button onclick="changes()">Do operations on Input Element</button>
+
+    <script>
+      console.log(document.getElementsByTagName("p"));
+
+      console.log(document.querySelectorAll("p"));
+
+      function changes() {
+
+        let inputfield = document.getElementById("input")
+        console.log(inputfield.value);
+
+        inputfield.style.color = "red"
+
+
+      }
+    </script>
+  </body>
+</html>

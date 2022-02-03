@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <div>
+        <p>Codekul</p>
+    </div> -->
+
+    <!-- go through all respctive events list  https://developer.mozilla.org/en-US/docs/Web/Events -->
+    <!-- https://www.w3schools.com/jsref/dom_obj_event.asp -->
+    <button onclick="createPara()">Create Paragraph</button>
+
+    <script>
+      function createPara() {
+        let container = document.createElement("div");
+
+        console.log(container);
+
+        //  syntax for appending elements ->  parentElement.appendChild(childElement)
+
+        let body = document.body;
+
+        body.appendChild(container);
+
+        let para = document.createElement("p")
+
+        container.append(para);
+
+        let content = "Codekul";
+
+        para.append(content);
+      }
+    </script>
+  </body>
+</html>
