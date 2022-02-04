@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="para">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, delectus
+      consequatur dolore dicta libero laboriosam, animi nesciunt sit rem quam
+      ratione atque voluptates. Sit neque mollitia perferendis, impedit earum
+      incidunt.
+    </p>
+
+    <script>
+      // callbacks, promises
+
+      // https://blog.logrocket.com/deep-dive-into-event-bubbling-and-capturing/
+      // https://flaviocopes.com/javascript-events/
+      // event.stopPropagation()
+      // we can use event listeners in two ways
+      // 1. using eventlistener as an attribute for element.
+      // 2. using addEventListener method
+
+      let para = document.getElementById("para");
+
+      //    addEventListener syntax ->
+      //    element.addEventListener("type of event", statement/event listener to be executed)
+
+      para.addEventListener("click", () => {
+        para.style.color = "red";
+      });
+
+      para.addEventListener("mouseenter", () => {
+        para.style.fontSize = "40px";
+      });
+    </script>
+  </body>
+</html>
