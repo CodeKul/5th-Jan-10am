@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul id="menu">
+        <li><a id="home">home</a></li>
+        <li><a id="dashboard">Dashboard</a></li>
+        <li><a id="report">report</a></li>
+    </ul>
+
+    <script>
+//         let home = document.querySelector('#home');
+// home.addEventListener('home',(event) => {
+//     console.log('Home menu item was clicked');
+// });
+
+// let dashboard = document.querySelector('#dashboard');
+// dashboard.addEventListener('dashboard',(event) => {
+//     console.log('Dashboard menu item was clicked');
+// });
+
+// let report = document.querySelector('#report');
+// report.addEventListener('report',(event) => {
+//     console.log('Report menu item was clicked');
+// });
+
+let menu = document.querySelector('#menu');
+
+menu.addEventListener('click', (event) => {
+    let target = event.target;
+
+    switch(target.id) {
+        case 'home':
+            console.log('Home menu item was clicked');
+            break;
+        case 'dashboard':
+            console.log('Dashboard menu item was clicked');
+            break;
+        case 'report':
+            console.log('Report menu item was clicked');
+            break;
+    }
+});
+
+    </script>
+</body>
+</html>

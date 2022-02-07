@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //    synchronous and asynchronous
+      //   1. send register request
+      //   2. display home page
+      //   3. send login request
+      //   4. accept login request and allow permission
+      //   5. display user data
+
+      // callback hell
+      // deep nested structure of callbacks is a callback hell
+
+      //  sum(1)(2)(3) = 5  currying example - closures
+
+      // https://www.youtube.com/watch?v=oU3LzOO0OGA
+
+      function sum(a) {
+        return function (b) {
+          return function (c) {
+            console.log(a + b + c);
+            return a + b + c;
+          };
+        };
+      }
+
+      sum(1)(2)(3);
+      function register(callback) {
+        callback(callback2);
+
+        callback2(callback3);
+        callback3();
+      }
+
+      function register(callback) {
+        setTimeout(() => {
+          console.log("User Registered");
+        }, 1000);
+
+        callback();
+      }
+
+      function home() {
+        setTimeout(() => {
+          console.log("Home Page");
+        }, 2000);
+      }
+
+      function loginRequest() {
+        console.log("Login request send");
+      }
+
+      function loginAccepted() {
+        console.log("Login request accepted and permission given");
+      }
+
+      function userData() {
+        console.log("User data");
+      }
+
+      //       setTimeout(()=>{
+      // console.log("Hii")
+      //       }, 5000)
+
+      register(home);
+      home(loginRequest);
+      //loginRequest();
+      loginAccepted();
+      userData();
+    </script>
+  </body>
+</html>
