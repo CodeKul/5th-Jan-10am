@@ -8,6 +8,17 @@
   </head>
   <body>
     <script>
+      function display(callback) {
+        callback();
+      }
+
+      display(add);
+
+      function add() {
+        let a = 10;
+        let b = 20;
+        console.log(a + b);
+      }
       //    synchronous and asynchronous
       //   1. send register request
       //   2. display home page
@@ -22,58 +33,118 @@
 
       // https://www.youtube.com/watch?v=oU3LzOO0OGA
 
-      function sum(a) {
-        return function (b) {
-          return function (c) {
-            console.log(a + b + c);
-            return a + b + c;
-          };
-        };
-      }
+      // setTimeout(()=>{
 
-      sum(1)(2)(3);
-      function register(callback) {
-        callback(callback2);
-
-        callback2(callback3);
-        callback3();
-      }
+      // },5000)
 
       function register(callback) {
         setTimeout(() => {
-          console.log("User Registered");
-        }, 1000);
-
-        callback();
+          console.log("Send register Request");
+          callback();
+        }, 3000);
       }
 
-      function home() {
+      function home(callback2) {
         setTimeout(() => {
           console.log("Home Page");
+          callback2();
+        }, 1500);
+      }
+
+      function loginRequest(callback3) {
+        setTimeout(() => {
+          console.log("Send login Request");
+          callback3();
+        }, 5000);
+      }
+
+      function acceptLogin(callback4) {
+        setTimeout(() => {
+          console.log("Accept Login request");
+          callback4();
+        }, 6000);
+      }
+
+      function displayUserData() {
+        setTimeout(() => {
+          console.log("Display User Data");
         }, 2000);
       }
 
-      function loginRequest() {
-        console.log("Login request send");
-      }
+      register(function () {
+        home(function () {
+          loginRequest(function () {
+            acceptLogin(function () {
+              displayUserData();
+            });
+          });
+        });
+      });
 
-      function loginAccepted() {
-        console.log("Login request accepted and permission given");
-      }
+      // function sum(a) {
+      //   return function (b) {
+      //     return function (c) {
+      //       console.log(a + b + c);
+      //       return a + b + c;
+      //     };
+      //   };
+      // }
 
-      function userData() {
-        console.log("User data");
-      }
+      // sum(1)(2)(3);
+
+      // function register(callback) {
+      //   setTimeout(() => {
+      //     console.log("User Registered");
+      //     callback();
+      //   }, 5000);
+      // }
+
+      // function home(callback2) {
+      //   setTimeout(() => {
+      //     console.log("Home Page");
+      //     callback2();
+      //   }, 5000);
+      // }
+
+      // function loginRequest(cb) {
+      //   setTimeout(() => {
+      //     console.log("Login request send");
+      //     cb();
+      //   }, 2000);
+      // }
+
+      // function loginAccepted(cb2) {
+      //   setTimeout(() => {
+      //     console.log("Login request accepted and permission given");
+      //     cb2();
+      //   }, 3000);
+      // }
+
+      // function userData() {
+      //   setTimeout(() => {
+      //     console.log("User data");
+      //   }, 1500);
+      // }
 
       //       setTimeout(()=>{
       // console.log("Hii")
       //       }, 5000)
 
-      register(home);
-      home(loginRequest);
-      //loginRequest();
-      loginAccepted();
-      userData();
+      //   register();
+      //   home();
+      //   loginRequest();
+      //   loginAccepted();
+      //   userData();
+
+      // register(function () {
+      //   home(function () {
+      //     loginRequest(function () {
+      //       loginAccepted(function () {
+      //         userData();
+      //       });
+      //     });
+      //   });
+      // });
     </script>
   </body>
 </html>

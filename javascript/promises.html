@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let promiseObject = new Promise((resolve, reject) => {
+        reject("Request Rejected");
+      });
+
+      console.log(promiseObject);
+
+      //   promise consumption syntax
+      //   promiseobject.then() or promiseobject.catch()
+      promiseObject.then();
+
+      promiseObject
+        .then(() => {
+          console.log("BBC Promise resolved");
+        })
+        .catch(() => {
+          console.log("BBC Promise Rejected");
+        });
+    </script>
+  </body>
+</html>
