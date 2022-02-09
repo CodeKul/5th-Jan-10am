@@ -8,8 +8,8 @@
   </head>
   <body>
     <script>
-      let promiseObject = new Promise((resolve, reject) => {
-        reject("Request Rejected");
+      let promiseObject = new Promise((a, b) => {
+        a("Request Rejected");
       });
 
       console.log(promiseObject);
@@ -21,6 +21,13 @@
       promiseObject
         .then(() => {
           console.log("BBC Promise resolved");
+          let result = new Promise((x, y) => {
+            x("Second Promise resolved");
+          });
+          return result;
+        })
+        .then((result) => {
+          console.log(result);
         })
         .catch(() => {
           console.log("BBC Promise Rejected");
