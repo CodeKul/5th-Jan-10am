@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+
+    <form autocomplete="on" action="" >
+      <label for="fname">Full Name</label>
+      <input  maxlength="6" size="10" id="fname" type="text" /> <br>
+
+      <label for="">Email</label>
+      <input  id="email" type="email" required /> <br>
+
+      <label for="">Password</label>
+      <input id="password" type="password" /> <br>
+
+      <label for="">Confirm Password</label>
+      <input id="confirmpassword" type="password" /> <br>
+
+      <label for="">Age</label>
+      <input  step="5" min="18" type="number">
+
+      <button onclick="sendData()" type="button">Register</button>
+    </form>
+
+    <script>
+    //   fetch("https://jsonplaceholder.typicode.com/users", {
+    //     method: "post",
+    //     body: {
+    //       fname: "Sanket",
+    //       email: "s@gmail.com",
+    //       password: "123456",
+    //     },
+    //   });
+
+    // event loop -
+    // http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
+
+    function sendData(){
+        let fname = document.getElementById("fname").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let confirmpassword = document.getElementById("confirmpassword").value;
+
+        console.log("Full Name", fname);
+        console.log("Email", email);
+        console.log("Password", password);
+        console.log("Confirm Password", confirmpassword);
+
+        if(fname == ""){
+            console.log("Please Enter Full name")
+        } 
+
+       let emailValid = RegExp('/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/')
+      if( emailValid.test(email)){
+          console.log("Email matched")
+      } else {
+          console.log("Enter Email correctly")
+      }
+       
+    }
+    </script>
+  </body>
+</html>
